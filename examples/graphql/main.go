@@ -315,7 +315,7 @@ func main() {
 		"- http :8080/graphql query=='{postsList{id,meta{title},user{id,name}}}'\n",
 		"- http :8080/graphql query=='{posts(id:\"ar5qrgukj5l7a6eq2ps0\"){followers{post{id,meta{title}},user{id,name}}}}'\n",
 		"- http :8080/graphql query=='{posts(id:\"ar5qrgukj5l7a6eq2ps0\"){id,meta{title},followers(limit:2){user{id,name}}}}'")
-	if err := http.ListenAndServe(":8080", nil); err != nil {
+	if err := http.ListenAndServe(":8081", nil); err != nil {
 		log.Fatal(err)
 	}
 }
